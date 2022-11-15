@@ -1,0 +1,71 @@
+
+.advice{
+    margin-top:50px;
+    padding:10px;
+    position:relative;
+    left:50px;
+    text-align:center;
+   border:2px solid #defcf9
+}
+#search-bar{
+position: relative;
+left:550px;
+bottom:70px;
+
+}
+#search-bar input[type=submit]{
+color:#2c786c;
+background-color:#defcf9 ;
+border:2px solid #defcf9; 
+border-radius:4px; 
+box-shadow: 0 8px 16px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+font-size:14px;
+margin-left:10px;
+padding:5px 3px;
+transition:all 120ms ease-in-out;
+}
+
+#search-bar input[type=search]{
+font-size: 15px;
+}
+#search-bar input[type=submit]:hover{
+cursor:pointer;
+color:#defcf9;
+background-color:#1d4943 ;
+box-shadow: 10px 8px 16px  rgb(0 0 0 / 70%);
+}
+canvas{
+    position:relative;
+    bottom:10px;
+    right:250px;
+}
+#first-row{
+    margin-top: 30px;
+}
+svg{
+    position:relative;
+    bottom:20px;
+    left:480px;
+}
+
+/*.text-main, .side-bar{
+    position:relative;
+    bottom:80px;
+}
+footer{
+     position:relative;
+    bottom:40px;
+}*/
+
+#tooltiptext,#tooltiptext2, #tooltiptext>a,#tooltiptext2>a{
+font-size: 13px;
+color:#defcf9;
+}
+#tooltiptext>a,#tooltiptext2>a{
+text-decoration:underline;
+
+}
+#tooltiptext{
+    position:relative;
+    left:-420px;
+}

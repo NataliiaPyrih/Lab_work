@@ -1,0 +1,36 @@
+body {
+    opacity: 1;
+}
+
+h2:hover,h3:hover,h4:hover{
+cursor:text;
+}
+
+.carusel-container{
+    overflow:visible;
+    position:relative;
+    left: 20px;
+    width: 16%;
+    border:none;
+}
+.btnWreck{
+    display:none;
+}
+
+.gallery:hover{
+cursor:default;
+}
+.gallery{
+    margin-right: 50px;
+    position:relative;
+    top:70px;
+    margin-left:30px;
+    display: inline-block;
+}
+
+#showWithoutScript{
+    display: block;
+    color:red;
+    font-size:20px;
+    text-align:center;
+}

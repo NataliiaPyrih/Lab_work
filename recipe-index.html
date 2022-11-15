@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My test page</title>
+    <link rel="stylesheet" href="Styles/Заголовки.css">
+    <link rel="stylesheet" href="Styles/Меню.css">
+    <link rel="stylesheet" href="Styles/Текст.css">
+    <link rel="stylesheet" href="Styles/Картинка.css">
+    <link rel="stylesheet" href="Styles/Різне.css">
+    <link rel="stylesheet" href="Styles/recipe.css">
+    <script src="script/diff.js"></script>
+    <script src="script/key.js"></script>
+    <noscript>
+        <link rel="stylesheet" href="Styles/nojs.css">
+    </noscript>
+</head>
+
+<body>
+    <header>
+        <h1>Вивчаємо рецепти разом!🥰</h1>
+    </header>
+    <nav class="column navigation">
+        <ul>
+            <li><a href="index.html">Головна сторінка</a></li>
+            <li><a href="history-index.html">Історія
+                    кулінарії</a>
+            </li>
+            <li><a href="chefs-index.html">Відомі кулінари</a>
+            </li>
+            <li><a href="food-index.html">Вибір продуктів</a>
+            </li>
+            <li class="dropdown"><a href="recipe-index.html" class="this">Рецепти:</a>
+                <ol class="dropdown-content">
+                    <li><a href="salad-index.html">Салати</a>
+                    </li>
+                    <li><a href="snacks-index.html">Швидкі
+                            закуски</a></li>
+                    <li><a href="desserts-index.html">Десерти</a>
+                    </li>
+                </ol>
+            </li>
+            <li><a href="terms-index.html">Корисні терміни</a>
+            </li>
+            <li><a href="form-index.html">Форум</a></li>
+            <li><a href="gallery.html">Галерея</a></li>
+            <li><a href="measure.html">Одиниці виміру</a></li>
+            <li><a href="media-content.html">Медіа контент</a></li>
+        </ul>
+    </nav>
+    <main>
+        <p class="quote">Готувати - це ж так просто! Головне дотримуватися
+            рецепта. Написано покласти дві чашки солі - кладеш дві чашки солі!
+            <br />
+            телесеріал "Друзі"
+        </p>
+        <br />
+        <article>
+            <p>Прості рецепти для початківців виручать, якщо Ви поки
+                що тільки
+                приступили до освоєння домашніх рецептів. Як
+                навчитися
+                готувати? Просто дотримуйтесь рецептів і не бійтеся пробувати щось нове.</p>
+            <strong>Рекомендуємо Вам наступні сторінки
+                з
+                рецептами:
+            </strong>
+            <section class="=content">
+                <div class="new-pages">
+                    <a href="salad-index.html" class="new-page">Салати</a>
+                    <br />
+                    <img src="images/salads.jpg" alt="Зображення салату" class="recipe-new">
+                </div>
+                <div class="new-pages">
+                    <a href="snacks-index.html" class="new-page">Десерти</a>
+                    <br />
+                    <img src="images/desserts.jpg" alt="Зображення торту" class="recipe-new">
+                </div>
+                <div class="new-pages">
+                    <a href="desserts-index.html" class="new-page">Швидкі
+                        закуски</a>
+                    <img src="images/snack-2.jpeg" alt="Зображення хот-догів" class="recipe-new">
+
+                </div>
+            </section>
+        </article>
+    </main>
+    <footer>
+        <small>Сайт розроблено студенткой групи ІТШІ-21-1 ХНУРЕ Пиріг Н. Я.</small>
+    </footer>
+    <script>
+        window.onscroll = function () { myFunction() };
+        var navbarEl = document.querySelector(".navigation");
+        var sticky = navbarEl.offsetTop;
+
+        function myFunction() {
+            if (window.pageYOffset >= sticky) {
+                navbarEl.classList.add("sticky")
+            } else {
+                navbarEl.classList.remove("sticky");
+            }
+        }
+    </script>
+</body>
+
+</html>

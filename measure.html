@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My test page</title>
+    <link rel="stylesheet" href="Styles/Заголовки.css">
+    <link rel="stylesheet" href="Styles/Меню.css">
+    <link rel="stylesheet" href="Styles/Текст.css">
+    <link rel="stylesheet" href="Styles/Картинка.css">
+    <link rel="stylesheet" href="Styles/Різне.css">
+    <link rel="stylesheet" href="Styles/Таблиця.css">
+    <script src="script/showHide.js"></script>
+    <script src="script/diff.js"></script>
+    <script src="script/table.js"></script>
+    <script src="script/key.js"></script>
+    <noscript>
+        <link rel="stylesheet" href="Styles/nojs.css">
+    </noscript>
+
+</head>
+
+<body>
+    <header>
+        <h1>Швидко та смачно</h1>
+    </header>
+    <nav class="column navigation">
+        <ul>
+            <li><a href="index.html">Головна сторінка</a></li>
+            <li><a href="history-index.html">Історія
+                    кулінарії</a>
+            </li>
+            <li><a href="chefs-index.html">Відомі кулінари</a>
+            </li>
+            <li><a href="food-index.html">Вибір продуктів</a>
+            </li>
+            <li class="dropdown"><a href="recipe-index.html">Рецепти:</a>
+                <ol class="dropdown-content">
+                    <li><a href="salad-index.html">Салати</a>
+                    </li>
+                    <li><a href="snacks-index.html">Швидкі
+                            закуски</a></li>
+                    <li><a href="desserts-index.html">Десерти</a>
+                    </li>
+                </ol>
+            </li>
+            <li><a href="terms-index.html">Корисні терміни</a>
+            </li>
+            <li><a href="form-index.html">Форум</a></li>
+            <li><a href="gallery.html">Галерея</a></li>
+            <li><a href="measure.html" class="this">Одиниці виміру</a></li>
+            <li><a href="media-content.html">Медіа контент</a></li>
+        </ul>
+    </nav>
+    <main class="text-main">
+        <details id="table">
+            <summary>
+                Одиниці виміру, які стануть у пригоді на кухні
+            </summary>
+            <table id="color_table">
+                <tr>
+                    <td colspan="2">
+                        Температура
+                    </td>
+                </tr>
+                <tr class="even">
+                    <td>120 °C</td>
+                    <td>250 °F</td>
+                </tr>
+                <tr>
+                    <td>180 °C</td>
+                    <td>350 °F</td>
+                </tr>
+                <tr class="even">
+                    <td>200 °C</td>
+                    <td>400 °F</td>
+                </tr>
+                <tr>
+                    <td>240 °C</td>
+                    <td>475 °F</td>
+                </tr>
+                <tr class="even">
+                    <td colspan="2">
+                        Вага
+                    </td>
+                </tr>
+                <tr>
+                    <td>0,5 унції</td>
+                    <td>15 грамів</td>
+                </tr>
+                <tr class="even">
+                    <td>1 унції</td>
+                    <td>30 грамів</td>
+                </tr>
+                <tr>
+                    <td>5 унції</td>
+                    <td>140 грамів</td>
+                </tr>
+                <tr class="even">
+                    <td>10 унції</td>
+                    <td>285 грамів</td>
+                </tr>
+                <tr>
+                    <td>32 унції</td>
+                    <td>0,9 кілограм</td>
+                </tr>
+                <tr class="even">
+                    <td colspan="2">Об `єм</td>
+                </tr>
+                <tr>
+                    <td>1 чайна ложка </td>
+                    <td>5 грамів</td>
+                </tr>
+                <tr class="even">
+                    <td>1 десертна ложка </td>
+                    <td>10 грамів</td>
+                </tr>
+                <tr>
+                    <td>1 столова ложка </td>
+                    <td>15 грамів</td>
+                </tr>
+                <tr class="even">
+                    <td colspan="2">Об `єм рідини</td>
+                </tr>
+                <tr>
+                    <td>1 літр</td>
+                    <td>1,76 пінти</td>
+                </tr>
+                <tr class="even">
+                    <td>1 рідка унція</td>
+                    <td>28,41 мл</td>
+                </tr>
+            </table>
+        </details>
+    </main>
+    <footer>
+        <small>Сайт розроблено студенткой групи ІТШІ-21-1 ХНУРЕ Пиріг Н. Я.</small>
+    </footer>
+    <script>
+        highlight_Table_Rows("color_table", "hover_Row");
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+.content{
+     float: left;
+     width:80%;
+   padding:30px 20px 50px 130px;
+}
+.new-pages{
+    margin:10px 20px;
+     float: left;
+    width:30%;
+}
+a.new-page{
+ color:#f8b400; 
+text-decoration: none;
+font-size:20px;
+position:relative;
+left:150px;
+}
+a.new-page:hover{
+cursor: pointer;
+ text-decoration:underline 
+}
+
+p{
+    font-size: 17px;
+    text-align:justify;
+}
+strong{
+    font-size: 18px;
+    text-align:center;
+    margin-left:60px;
+}

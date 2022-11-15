@@ -1,0 +1,9 @@
+
+.text-main{
+margin:0 20px;
+}
+
+.products, .recipe{
+float:left;
+width:50%;
+}

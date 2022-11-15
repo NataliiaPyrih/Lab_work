@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My test page</title>
+    <link rel="stylesheet" href="Styles/Заголовки.css">
+    <link rel="stylesheet" href="Styles/Меню.css">
+    <link rel="stylesheet" href="Styles/Текст.css">
+    <link rel="stylesheet" href="Styles/Картинка.css">
+    <link rel="stylesheet" href="Styles/Різне.css">
+    <link rel="stylesheet" href="Styles/food.css">
+    <script src="script/showHide.js"></script>
+    <script src="script/diff.js"></script>
+    <script src="script/key.js"></script>
+    <noscript>
+        <link rel="stylesheet" href="Styles/nojs.css">
+    </noscript>
+</head>
+
+<body>
+    <header>
+        <h1>Вибір продуктів</h1>
+    </header>
+    <nav class="column navigation">
+        <ul>
+            <li><a href="index.html">Головна сторінка</a></li>
+            <li><a href="history-index.html">Історія
+                    кулінарії</a>
+            </li>
+            <li><a href="chefs-index.html">Відомі кулінари</a>
+            </li>
+            <li><a href="food-index.html" class="this">Вибір продуктів</a>
+            </li>
+            <li class="dropdown"><a href="recipe-index.html">Рецепти:</a>
+                <ol class="dropdown-content">
+                    <li><a href="salad-index.html">Салати</a>
+                    </li>
+                    <li><a href="snacks-index.html">Швидкі
+                            закуски</a></li>
+                    <li><a href="desserts-index.html">Десерти</a>
+                    </li>
+                </ol>
+            </li>
+            <li><a href="terms-index.html">Корисні терміни</a>
+            </li>
+            <li><a href="form-index.html">Форум</a></li>
+            <li><a href="gallery.html">Галерея</a></li>
+            <li><a href="measure.html">Одиниці виміру</a></li>
+            <li><a href="media-content.html">Медіа контент</a></li>
+        </ul>
+    </nav>
+    <main>
+        <p class="quote">Кожен кухар, окрім того, що смачно готувати,
+            повинен вміти
+            правильно вибирати
+            інгредієнти для своїх страв!
+        </p>
+        <article class="column text-main">
+            <section>
+                <h3 onclick="showHide('meat')">М'ясо</h3>
+                <p id="meat">Перед тим, як вибрати шматок м'ясо необхідно спочатку уважно
+                    його оглянути.
+                    <strong>Зверніть увагу на колір:</strong> свинина та телятина завжди рожеві, а яловичина -
+                    природного червоного
+                    кольору.
+                    Занадто яскравий і ненатуральний відтінок говорить про те, що з м'ясо проводили якісь махінації.
+                    <strong>М'ясо не повинно бути слизьких.</strong> Якщо ви докладете до нього руку, то воно повинно
+                    залишитися
+                    сухим.
+                    Спробуйте натиснути на шматок пальцем. <strong>Якщо м'ясо свіже, то вм'ятина повинна швидко
+                        разгладиться.</strong>
+                </p>
+
+            </section>
+            <section class="fish">
+                <h3 onclick="showHide('fish')">Риба</h3>
+                <p id="fish"><strong>Цінна порада:</strong> купуйте непотрошеную рибу. Вона
+                    зберігає свої корисні
+                    соки навіть
+                    в мороженому
+                    вигляді. При виборішматочка обов'язково <strong>понюхайте</strong> його: Ви <i>відчуєте приємну
+                        морську
+                        або річкову свіжість.</i>
+                    <strong>Подивіться також на її очі.</strong> Якщо вони ясні, а не каламутні, це означає, що рибу
+                    виловили,
+                    коли
+                    вона була здоровою.
+                </p>
+            </section>
+            <section class="fruits">
+                <h3 onclick="showHide('fruits')">Овочі і фрукти</h3>
+                <p id="fruits">Не забувайте про <i>сезонність</i> овочів і фруктів. Смачні і
+                    соковиті помідори,
+                    наприклад, можна
+                    купити тільки з
+                    травня по
+                    жовтень.
+                    <b>При виборі плодів звертайте особливу увагу на їх зовнішній вигляд.</b> Вони не повинні бути
+                    ідеально рівними
+                    і гладкими. Це
+                    швидше ознака того, що фрукти і овочі не є <i>натуральними.</i> Зайва болючість, до речі, теж
+                    небажаний фактор.
+                    <b>Зверніть увагу
+                        на запах.</b> Так, коренеплоди повинні пахнути ще і землею, а аромат правильних помідорів можна
+                    охарактеризувати як терпкий
+                    і свіжий.
+                </p>
+            </section>
+            <section class="milk">
+                <h3 onclick="showHide('milk')">Молочна продукція</h3>
+                <p id="milk">
+                    При виборі молочної продукції на ринку віддавайте собі звіт, що там Ви навряд чи придбаєте дієтичне
+                    знежирені
+                    варіанти.
+                    Жирність сільського коров'ячого молока рідко <em>нижче 3-%</em>. Поцікавтеся у фермера підігріває
+                    він молоко
+                    після доїння.
+                    <strong>Пастеризація знезаражує продукт.</strong> Це важливо, тому що не кожен міський шлунок може
+                    без наслідків
+                    пити сільське коров'яче молоко.
+
+                    <strong>В залежності від сезону присмак і колір молочної продукції може відрізнятися.</strong> Це
+                    пов'язано з
+                    харчуванням домашнього
+                    худоби. Влітку корови пасуться на лузі і вживають в їжу свіжу траву, а взимку - силос і сіно. Тому з
+                    червня по
+                    серпень
+                    молоко може мати присмак кульбаб або конюшини, а сир буде солодким. Осінь та взимку, навпаки,
+                    молочка придбає
+                    кислуватий
+                    смак.
+                </p>
+            </section>
+        </article>
+        <aside class="column side-bar">
+            <img src="images/meat.jpg" alt="Зображення м'ясо" class="food">
+            <img src="images/fish.jpg" alt="Зображення риби" class="food">
+            <img src="images/vegetables.jpg" alt="Зображення овощів" class="food">
+            <img src="images/milk.jpg" alt="Зображення молочної продукції" class="food">
+        </aside>
+    </main>
+    <footer>
+        <small>Сайт розроблено студенткой групи ІТШІ-21-1 ХНУРЕ Пиріг Н. Я.</small>
+    </footer>
+    <script>
+        window.onscroll = function () { myFunction() };
+        var navbarEl = document.querySelector(".navigation");
+        var sticky = navbarEl.offsetTop;
+
+        function myFunction() {
+            if (window.pageYOffset >= sticky) {
+                navbarEl.classList.add("sticky")
+            } else {
+                navbarEl.classList.remove("sticky");
+            }
+        }
+    </script>
+</body>
+
+</html>

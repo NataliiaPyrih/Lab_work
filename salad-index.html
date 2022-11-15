@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My test page</title>
+    <link rel="stylesheet" href="Styles/Заголовки.css">
+    <link rel="stylesheet" href="Styles/Меню.css">
+    <link rel="stylesheet" href="Styles/Текст.css">
+    <link rel="stylesheet" href="Styles/Картинка.css">
+    <link rel="stylesheet" href="Styles/Різне.css">
+    <link rel="stylesheet" href="Styles/desserts.css">
+    <link rel="stylesheet" href="Styles/snacks.css">
+    <script src="script/showHide.js"></script>
+    <script src="script/diff.js"></script>
+    <script src="script/key.js"></script>
+    <noscript>
+        <link rel="stylesheet" href="Styles/nojs.css">
+    </noscript>
+</head>
+
+<body>
+    <header>
+        <h1>Салати🥗</h1>
+    </header>
+    <nav class="column navigation" id="navbar">
+        <ul>
+            <li><a href="index.html">Головна сторінка</a></li>
+            <li><a href="history-index.html">Історія
+                    кулінарії</a>
+            </li>
+            <li><a href="chefs-index.html">Відомі кулінари</a>
+            </li>
+            <li><a href="food-index.html">Вибір продуктів</a>
+            </li>
+            <li class="dropdown"><a href="recipe-index.html">Рецепти:</a>
+                <ol class="dropdown-content">
+                    <li><a href="salad-index.html" class="this">Салати</a>
+                    </li>
+                    <li><a href="snacks-index.html">Швидкі
+                            закуски</a></li>
+                    <li><a href="desserts-index.html">Десерти</a>
+                    </li>
+                </ol>
+            </li>
+            <li><a href="terms-index.html">Корисні терміни</a>
+            </li>
+            <li><a href="form-index.html">Форум</a></li>
+            <li><a href="gallery.html">Галерея</a></li>
+            <li><a href="measure.html">Одиниці виміру</a></li>
+            <li><a href="media-content.html">Медіа контент</a></li>
+        </ul>
+    </nav>
+    <main>
+        <br />
+        <article class="column text-main">
+            <section>
+                <h3 onclick="showHide('salad')">Салат з сухариками "Королівський"</h3>
+                <span id="salad">
+                    <div class="products">
+                        <strong>Продукти:</strong>
+                        <ul>
+                            <li>Крабові палички - 240 г </li>
+                            <li>Сир твердий - 300 г</li>
+                            <li>Яйця курячі - 4 шт.</li>
+                            <li> Сухарики - 100 г</li>
+                            <li>Часник - 2-3 зубчики</li>
+                            <li>Лимон (сік) - 0,5 шт.</li>
+                            <li>Майонез - за смаком </li>
+                        </ul>
+                    </div>
+                    <div class="recipe">
+                        <ol>
+                            <li>Нарізати крабові палички.</li>
+                            <li>Курячі яйця відварити круто. Очистити. Охолодити. Нарізати кубиками.</li>
+                            <li>Твердий сир натерти на крупній тертці.</li>
+                            <li>Часник почистити та розчавити в часничниці.</li>
+                            <li> Викласти всі інгредієнти в салатницю і додати сухарики. Полити лимонним соком.</li>
+                            <li> Заправити салат майонезом і добре перемішати.</li>
+                        </ol>
+                    </div>
+                </span>
+            </section>
+            <section>
+                <h3 onclick="showHide('salad2')">Салат "Їжачок"</h3>
+                <span id="salad2">
+                    <div class="products">
+                        <strong>Продукти:</strong>
+                        <ul>
+                            <li>Ковбаса копчена - 100 г </li>
+                            <li>Сир твердий - 100 г</li>
+                            <li>Кукурудза консервована - 140 г</li>
+                            <li> Яйця варені - 3 шт.</li>
+                            <li>Майонез - 80 г</li>
+                        </ul>
+                    </div>
+                    <div class="recipe">
+                        <ol>
+                            <li>Яйця заздалегідь зварити круто (10 хвилин) і остудити в холодній воді. Нарізати їх потім
+                                кубиками.</li>
+                            <li>Ковбасу нарізати кубиками.</li>
+                            <li>Сир натерти на тертці.</li>
+                            <li>З'єднати ковбасу, сир, яйця і кукурудзу (без рідини).</li>
+                            <li>Заправити салат "Їжачок" майонезом і перемішати всі інгредієнти.</li>
+                        </ol>
+                    </div>
+                </span>
+            </section>
+            <section>
+                <h3 onclick="showHide('salad3')">Салат із молодої капусти з
+                    апельсинами</h3>
+                <span id="salad3">
+                    <div class="products">
+                        <strong>Продукти:</strong>
+                        <ul>
+                            <li>Капуста білокачанна - 500 г</li>
+                            <li>Апельсин -1 шт.</li>
+                            <li>Яблуко - 3 шт.</li>
+                            <li> Майонез - за смаком </li>
+                            <li>сметана - за смаком </li>
+                        </ul>
+                    </div>
+                    <div class="recipe">
+                        <ol>
+                            <li>Молоду капусту нашаткувати. Якщо жорстка, то трохи розім'яти руками. </li>
+                            <li> Апельсин очистити від плівок і нарізати великими кубиками.</li>
+                            <li> Яблука очистити від шкірки і натерти на крупній тертці.</li>
+                            <li>Усі інгредієнти скласти в миску, додати за смаком майонез або сметану. </li>
+                            <li>Добре перемішати. </li>
+                        </ol>
+                    </div>
+                </span>
+            </section>
+        </article>
+        <aside class="column side-bar">
+            <img src="images/salad-1.jpg" alt="Салат з сухариками" class="salad">
+            <img src="images/salad-2.webp" alt="салат Іжачок" class="salad">
+            <img src="images/salad-3.jpg" alt="Салат із молодої капусти з
+                        апельсинами" class="salad">
+        </aside>
+    </main>
+    <footer>
+        <small>Сайт розроблено студенткой групи ІТШІ-21-1 ХНУРЕ Пиріг Н. Я.</small>
+    </footer>
+    <script>
+        window.onscroll = function () { myFunction() };
+        var navbarEl = document.querySelector(".navigation");
+        var sticky = navbarEl.offsetTop;
+
+        function myFunction() {
+            if (window.pageYOffset >= sticky) {
+                navbarEl.classList.add("sticky")
+            } else {
+                navbarEl.classList.remove("sticky");
+            }
+        }
+    </script>
+</body>
+
+</html>

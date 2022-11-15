@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My test page</title>
+    <link rel="stylesheet" href="Styles/Заголовки.css">
+    <link rel="stylesheet" href="Styles/Меню.css">
+    <link rel="stylesheet" href="Styles/Текст.css">
+    <link rel="stylesheet" href="Styles/Картинка.css">
+    <link rel="stylesheet" href="Styles/Різне.css">
+    <link rel="stylesheet" href="Styles/form.css">
+    <script src="script/form.js"></script>
+    <script src="script/diff.js"></script>
+    <script src="script/more-form.js"></script>
+    <noscript>
+        <link rel="stylesheet" href="Styles/nojs.css">
+    </noscript>
+</head>
+
+<body>
+    <noscript>
+        <p style="color:rgb(183, 54, 54)">
+            Ввімкніть скрипти, або Ви не змножете відправити данні!
+        </p>
+    </noscript>
+    <header>
+        <h1>
+            Швидко
+            та смачно</h1>
+    </header>
+    <nav class="column navigation" id="navbar">
+        <ul>
+            <li><a href="index.html">Головна сторінка</a></li>
+            <li><a href="history-index.html">Історія
+                    кулінарії</a>
+            </li>
+            <li><a href="chefs-index.html">Відомі кулінари</a>
+            </li>
+            <li><a href="food-index.html">Вибір продуктів</a>
+            </li>
+            <li class="dropdown"><a href="recipe-index.html">Рецепти:</a>
+                <ol class="dropdown-content">
+                    <li><a href="salad-index.html">Салати</a>
+                    </li>
+                    <li><a href="snacks-index.html">Швидкі
+                            закуски</a></li>
+                    <li><a href="desserts-index.html">Десерти</a>
+                    </li>
+                </ol>
+            </li>
+            <li><a href="terms-index.html">Корисні терміни</a>
+            </li>
+            <li><a href="form-index.html" class="this">Форум</a></li>
+            <li><a href="gallery.html">Галерея</a></li>
+            <li><a href="measure.html">Одиниці виміру</a></li>
+            <li><a href="media-content.html">Медіа контент</a></li>
+        </ul>
+    </nav>
+    <main>
+        <article class="column text-main">
+            <form action="#" id="form1">
+                <p>Тема повідомлення:</p>
+                <input type="text" name="topic">
+                <br />
+                <p>E-mail, JS:</p>
+                <input type="text" id="email" name="email">
+                <button id="checkEmail">Валідація e-mail, JS</button>
+                <span id="error" style="display:none"></span>
+
+                <p>Телефон, JS:</p>
+                <input type="phone-number" id="phone-number" name="phone-number">
+                <button id="checkTel">Валідація телефону, JS</button>
+                <span id="errorPhone" style="display:none"></span>
+                <p>E-mail, HTML5:</p>
+                <input type="email" name="email" required placeholder="test@gmail.com"
+                    pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,5}$" title="Перевірте правильність вводу email!">
+                <button id="checkEmailHTML">Валідація e-mail, HTML5</button>
+                <span id="error" style="display:none"></span>
+
+                <p>Телефон, HTML5:</p>
+                <input type="tel" name="phone-number" required placeholder="+380000000000" pattern="[\+380]\d{12}"
+                    title="Перевірте правильність вводу номеру телефону! Запишіть його в форматі +380*********">
+                <button id="checkTelHTML">Валідація телефону, HTML5</button>
+                <span id="errorPhone" style="display:none"></span>
+
+                <p>Поділіться своїм досвітом в
+                    кулінарії або рецептами смачних страв: </p>
+                <textarea name="comments" rows="13" cols="80"></textarea>
+                <br />
+                <br />
+                <input type="submit" value="Опублікувати">
+            </form>
+        </article>
+        <aside class="column side-bar">
+            <img src="images/form.jpg" alt="Меню для ресторана" class="form-image">
+        </aside>
+    </main>
+    <script>
+
+        checkEmail.addEventListener("click", checkMaill);
+        checkTel.addEventListener("click", checkPhone);
+        if (CheckHTML5() == false) {
+            alert("Ваш браузер не підтримує HTML 5!");
+            checkEmail.addEventListener("click", checkMaill);
+            checkTelHTML.addEventListener("click", checkPhone);
+        }
+
+        form1.addEventListener("submit", checkData);
+        window.onscroll = function () { myFunction() };
+        var navbarEl = document.querySelector(".navigation");
+        var sticky = navbarEl.offsetTop;
+
+        function myFunction() {
+            if (window.pageYOffset >= sticky) {
+                navbarEl.classList.add("sticky")
+            } else {
+                navbarEl.classList.remove("sticky");
+            }
+        }
+
+    </script>
+</body>
+
+</html>

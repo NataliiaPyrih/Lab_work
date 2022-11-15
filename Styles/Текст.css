@@ -1,0 +1,42 @@
+b, strong{
+color:#faf5e4;
+}
+
+p, ul, ol, li, dd{
+    color: #b6d0c3;
+    text-align:justify;
+    font-size: 16px; 
+    font-family:'Times New Roman', Times, serif;
+    
+}
+
+p::selection, li::selection, ul::selection, ol::selection, dd::selection{
+     background-color: #b6d0c3;
+    color:#2c786c; 
+}
+
+a{
+    color:#042424;
+    text-decoration: none;
+}
+
+p>a:visited{
+color:#000000;
+}
+.quote{
+    text-align:right; 
+    color: #f8b400; 
+    font-size:18px;
+    text-decoration:underline;
+    cursor:not-allowed;
+}
+dt{
+    text-transform: uppercase;
+    color:#faf5e4;
+     font-family:'Times New Roman', Times, serif;
+}
+
+dl{
+    margin-left:10px; 
+    font-size:17px;
+}

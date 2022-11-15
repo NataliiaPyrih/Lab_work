@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My test page</title>
+    <link rel="stylesheet" href="Styles/Заголовки.css">
+    <link rel="stylesheet" href="Styles/Меню.css">
+    <link rel="stylesheet" href="Styles/Текст.css">
+    <link rel="stylesheet" href="Styles/Картинка.css">
+    <link rel="stylesheet" href="Styles/Різне.css">
+    <link rel="stylesheet" href="Styles/Main-page.css">
+    <link rel="stylesheet" href="Styles/gallery.css">
+    <script src="Script/gallery.js"></script>
+    <script src="script/diff.js"></script>
+    <script src="script/key.js"></script>
+    <noscript>
+        <link rel="stylesheet" href="Styles/nojs.css">
+    </noscript>
+</head>
+
+<body>
+    <header>
+        <h1>Галерея </h1>
+    </header>
+    <nav class="column navigation">
+        <ul>
+            <li><a href="index.html">Головна сторінка</a></li>
+            <li><a href="history-index.html">Історія
+                    кулінарії</a>
+            </li>
+            <li><a href="chefs-index.html">Відомі кулінари</a>
+            </li>
+            <li><a href="food-index.html">Вибір продуктів</a>
+            </li>
+            <li class="dropdown"><a href="recipe-index.html">Рецепти:</a>
+                <ol class="dropdown-content">
+                    <li><a href="salad-index.html">Салати</a>
+                    </li>
+                    <li><a href="snacks-index.html">Швидкі
+                            закуски</a></li>
+                    <li><a href="desserts-index.html">Десерти</a>
+                    </li>
+                </ol>
+            </li>
+            <li><a href="terms-index.html">Корисні терміни</a>
+            </li>
+            <li><a href="form-index.html">Форум</a></li>
+            <li><a href="gallery.html" class="this">Галерея</a></li>
+            <li><a href="measure.html">Одиниці виміру</a></li>
+            <li><a href="media-content.html">Медіа контент</a></li>
+        </ul>
+    </nav>
+    <main class="column main">
+        <div class="carusel">
+            <div class="carusel-container">
+                <div id="carusel-slide">
+                    <img src="images/Галерея/photo-1.jpg" class="gallery">
+                    <img src="images/Галерея/photo-2.jpg" class="gallery">
+                    <img src="images/Галерея/photo-3.jpg" class="gallery">
+                    <img src="images/Галерея/photo-4.jpg" class="gallery">
+                    <img src="images/Галерея/photo-5.jpg" class="gallery" id="img5">
+                    <img src="images/Галерея/photo-6.jpg" class="gallery" id="img6">
+                </div>
+            </div>
+        </div>
+        <div class="btnWreck">
+            <button id="left">Попередній</button>
+            <button id="right">Наступний</button>
+        </div>
+        </div>
+        <div id="myModal" class="modal" style="display:none">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <span class="close">X</span>
+                </div>
+                <div class="modal-body">
+                    <img src="images/Галерея/photo-1.jpg" class="gallery1">
+                </div>
+                <div class="modal-footer">
+                    <h3 id="content"></h3>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script>
+        const buttonLeft = document.getElementById('left');
+        const buttonRight = document.getElementById('right');
+        const slide = document.getElementById('carusel-slide');
+        const images = document.querySelectorAll('.gallery');
+
+        let counter = 0;
+        //const stepSize = images[0].clientWidth;
+        //const stepSize = 169;
+        const stepSize = 348;
+        slide.style.transform = 'translateX(' + `${-stepSize * counter}px)`;
+
+        function shift() {
+            if (counter >= 2) { counter = -1; }
+            slide.classList.add('transformAnimation');
+            counter++;
+            slide.style.transform = 'translateX(' + `${-stepSize * counter}px)`;
+        }
+        function shiftLeft() {
+            if (counter <= 0) { counter = 3; }
+            slide.classList.add('transformAnimation');
+            counter--;
+            slide.style.transform = 'translateX(' + `${-stepSize * counter}px)`;
+        }
+        buttonRight.addEventListener('click', shift);
+        buttonLeft.addEventListener('click', shiftLeft);
+
+        document.onkeydown = function (event) {
+            if (event.key == 'ArrowRight' || event.key == 'ArrowUp') {
+                shift();
+            }
+            if (event.key == 'ArrowLeft' || event.key == 'ArrowDown') {
+                shiftLeft();
+            }
+        }
+
+        //Модальне вікно
+        var modal = document.getElementById('myModal');
+        var picture = document.querySelectorAll(".gallery");
+        var h3El = document.getElementById('content');
+        var contentImg = document.querySelector('.gallery1');
+        var span = document.getElementsByClassName("close")[0];
+
+        picture[0].onclick = function () {
+            contentImg.setAttribute("src", "images/Галерея/photo-1.jpg");
+            h3El.innerHTML = "Страва з броколі";
+            modal.style.display = "block";
+        }
+
+        picture[1].onclick = function () {
+            contentImg.setAttribute("src", "images/Галерея/photo-2.jpg");
+            h3El.innerHTML = "Фруктова тарілка";
+            modal.style.display = "block";
+        }
+        picture[2].onclick = function () {
+            contentImg.setAttribute("src", "images/Галерея/photo-3.jpg");
+            h3El.innerHTML = "Страви з креветок";
+            modal.style.display = "block";
+        }
+
+        picture[3].onclick = function () {
+            contentImg.setAttribute("src", "images/Галерея/photo-4.jpg");
+            h3El.innerHTML = "Мексиканські чіпси";
+            modal.style.display = "block";
+        }
+        picture[4].onclick = function () {
+            contentImg.setAttribute("src", "images/Галерея/photo-5.jpg");
+            h3El.innerHTML = "Сніданок у Франції";
+            modal.style.display = "block";
+        }
+        picture[5].onclick = function () {
+            contentImg.setAttribute("src", "images/Галерея/photo-6.jpg");
+            h3El.innerHTML = "Ресторана страва";
+            modal.style.display = "block";
+        }
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+        window.onscroll = function () { myFunction() };
+        var navbarEl = document.querySelector(".navigation");
+        var sticky = navbarEl.offsetTop;
+
+        function myFunction() {
+            if (window.pageYOffset >= sticky) {
+                navbarEl.classList.add("sticky")
+            } else {
+                navbarEl.classList.remove("sticky");
+            }
+        }
+    </script>
+
+</body>
+
+</html>

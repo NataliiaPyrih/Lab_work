@@ -1,0 +1,11 @@
+.column{
+    margin-top:20px;
+}
+
+.navigation{
+    background-color: #2c786c;
+    border:2px solid #defcf9;
+    border-radius: 20px; 
+    width:98%;
+    margin:3px 0 10px 0;
+}
